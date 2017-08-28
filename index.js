@@ -1,24 +1,29 @@
 var board = new Board();
 var player1 = new Player('.p1');
 var player2 = new Player('.p2');
-
-
+var contador; 
 $(document).keydown(function() {
 
-  if(event.keyCode === 37){
-    player1.left();}
-  if(event.keyCode === 39) {
-    player1.right();}
-  if(event.keyCode === 65){ // tecla A
-      player2.left();}
-  if(event.keyCode === 68) { // tecla D
-      player2.right();}
-    });
+  if (event.keyCode === 37) {
+    player1.left();
+  }
+  if (event.keyCode === 39) {
+    player1.right();
+  }
+  if (event.keyCode === 65) { // tecla A
+    player2.left();
+  }
+  if (event.keyCode === 68) { // tecla D
+    player2.right();
+  }
+});
 
-$(document).on('click', function(){
-  setInterval(function(){
-  var bads = new BadThings();
-  bads.appearTop();
-  bads.goDown();
-},2000);
+$(document).on('click', function() {
+  contador = new BadThings();
+  contador.appearTop();
+
+  setInterval(function() {
+
+    contador.goDown();
+  }, 1000);
 });

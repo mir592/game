@@ -1,29 +1,28 @@
-function BadThings(){
+var numberId = 0;
+
+function BadThings() {
   this.element = $('<div>').addClass('bads');
   this.speedX = 10;
   this.nextPx = 0;
-  this.posX = 0;
-  this.posY = 0;
+  this.posX = parseInt((this.element).position().left);
+  this.posY = parseInt((this.element).position().top);
+  this.element.css('top', this.posY, 'left', this.posX);
   $('.board').append(this.element);
-  console.log("HOLI");
+  console.log(this.posX);
 }
 
-BadThings.prototype.positions = function() {
-  this.posX = parseInt((this.element).position().left);
-  this.posY = parseInt($(this.element).position().top);
-  this.width = parseInt($(this.element).css('width'));
-  console.log("Posiciones", this.posX, this.posY, this.width);
+BadThings.prototype.appearTop = function() {
+  this.nextPx = parseInt(Math.floor(Math.random() * ($('.board').width() - 1)));
+  this.element.css('left', this.nextPx);
+  this.element.css('top', this.posY);
 };
 
-BadThings.prototype.appearTop = function(){
-  this.nextPx = parseInt(Math.floor(Math.random()*($('.board').width())));
-  console.log("appearTop", this.nextPx);
+BadThings.prototype.goDown = function() {
 
-};
-
-BadThings.prototype.goDown = function(speed){
-  console.log("GODOWN");
-//this.posY += this.speedX;
-  //console.log(this.posY += this.speedX);
-  this.element.css({top:this.posY, left:this.nextPx });
+  console.log(this.posY);
+  this.posY += this.speedX;
+  var newBads = this.element.css("top", this.posY).attr('id', 'obstacle' + numberId);
+  numberId++;
+  $('.board').append(newBads);
+  console.log(this.element);
 };
