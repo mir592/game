@@ -1,12 +1,18 @@
 var board = new Board();
 var player1 = new Player('.p1');
-
+var player2 = new Player('.p2');
 
 $(document).keydown(function() {
-  var max = (board.rigth - player1.width);
   if(event.keyCode === 37){
     player1.left();}
   if(event.keyCode === 39) {
-    player1.right();
-}
+    player1.right();}
+  if(event.keyCode === 65){
+      player2.left();}
+  if(event.keyCode === 68) {
+      player2.right();}
+});
+$(document).on('click', function(){
+
+
 });
