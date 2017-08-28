@@ -1,0 +1,28 @@
+body{
+  width: 100%;
+  height: 100%;
+}
+.board{
+  background-color: blue;
+  height: 600px;
+  width: 1000px;
+  /*left: 100px;*/
+  top: 50px;
+  position: absolute;
+}
+.p1{
+  background-color: red;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: 100px;
+  top: 540px;
+}
+.p2{
+  background-color: green;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  left: 840px;
+  top: 540px;
+}
