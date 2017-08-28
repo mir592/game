@@ -1,7 +1,7 @@
 var board = new Board();
 var player1 = new Player('.p1');
 var player2 = new Player('.p2');
-var contador; 
+var contador;
 $(document).keydown(function() {
 
   if (event.keyCode === 37) {
@@ -19,11 +19,13 @@ $(document).keydown(function() {
 });
 
 $(document).on('click', function() {
+
   contador = new BadThings();
   contador.appearTop();
 
   setInterval(function() {
 
     contador.goDown();
-  }, 1000);
+  }, 500);
+
 });
