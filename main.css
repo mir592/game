@@ -29,7 +29,22 @@ body{
 
 .bads{
   background-color: black;
-  height: 10px;
-  width: 10px;
+  height: 20px;
+  width: 20px;
   position: absolute;
+}
+#obstacle1{
+  background-color: yellow;
+}
+#obstacle2{
+  background-color: pink;
+}#obstacle3{
+  background-color: white;
+}#obstacle4{
+  background-color: red;
+}#obstacle5{
+  background-color: green;
+}
+#obstacle6{
+  background-color: brown;
 }
