@@ -1,47 +1,45 @@
-var fps = 10;
-
-
-function Board(){
+function Board() {
   this.initBoard();
 }
 
-Board.prototype.initBoard = function(){
-this.left = $('.board').position().left;
-this.top = $('.board').position().top;
-this.rigth = this.left + $('.board').width();
-this.bottom =  this.top + $('.board').height();
+Board.prototype.initBoard = function() {
+  this.left = $('.board').position().left;
+  this.top = $('.board').position().top;
+  this.rigth = this.left + $('.board').width();
+  this.bottom = this.top + $('.board').height();
 };
 
 $(document).ready(function() {
-var desiredNumberOfBads = 10;
-var bads = [];
-fullfillBads(desiredNumberOfBads);
-function fullfillBads(n){
-  for(var i=0; i<n-bads.length; i++){
-    var speed = Math.random() * 10 + 20;
-    bads.push(new Obstacles(speed));
+  var desiredNumberOfBads = 10;
+  var bads = [];
+  createEnemies(desiredNumberOfBads);
+
+  function createEnemies(n) {
+    for (var i = 0; i < n - bads.length; i++) {
+      var speed = Math.random() * 10 + 20;
+      bads.push(new Voldemort(speed));
+    }
+    console.log(bads);
   }
-  console.log(bads);
-}
 
-function updateAll() {
-bads = bads.filter(function(element){
-  console.log(element.tobeDeleted);
-  return !element.tobeDeleted;
-});
-bads.forEach(function(element){
-  element.updateBads();
-});
-}
+  function updateAll() {
+    bads = bads.filter(function(element) {
+      console.log(element.tobeDeleted);
+      return !element.tobeDeleted;
+    });
+    bads.forEach(function(element) {
+      element.updateBads();
+     });
+  }
 
-//setInterval(function(){
-  fullfillBads(desiredNumberOfBads);
-//},500);
+  setInterval(function() {
+    createEnemies(desiredNumberOfBads);
+  }, 500);
 
-setInterval(function() {
-  updateAll();
-  checkObstacles();
-}, 200);
+  setInterval(function() {
+    updateAll();
+    checkObstacles();
+  }, 200);
 });
 
 
