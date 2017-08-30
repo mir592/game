@@ -21,6 +21,35 @@ Obstacles.prototype.putBads = function() {
   numberId++;
 };
 
+function checkObstacles() {
+  if($(".p1").collision(".bads").length > 0){
+    $('.p1').attr('id', 'dead1');
+    return;
+
+  }
+  if($(".p2").collision(".bads").length > 0) {
+    $('.p2').attr('id','dead2');
+    return;
+  }
+
+}
+
+
+Obstacles.prototype.updateBads = function() {
+  this.positionY = (this.positionY + this.speed);
+  console.log("update");
+  this.element= $('<div>').addClass('bads').css({
+    top: this.positionY,
+    left: this.positionX
+  });
+  $('.board').append(this.element);
+  if(this.positionY > board.bottom-this.element.height()){
+    console.log("POSITION", this.positionY > board.bottom-this.element.height());
+    console.log("HOLITA", this.element.remove());
+    this.tobeDeleted = true;
+    this.element.remove();
+  }
+};
 // Obstacles.prototype.moveObstacles = function() {
 //   console.log('el numero es : ' + numberId);
 //
@@ -275,30 +304,3 @@ Obstacles.prototype.putBads = function() {
 //   clearInterval(intervalMoveObsta9);
 //   clearInterval(intervalMoveObsta10);
 // }
-function checkObstacles() {
-    if($(".p1").collision(".bads").length > 0){
-      $('.p1').attr('id', 'dead1');
-      return;
-
-    }
-    if($(".p2").collision(".bads").length > 0) {
-      $('.p2').attr('id','dead2');
-      return;
-    }
-
-}
-
-
-Obstacles.prototype.updateBads = function() {
-  this.positionY = (this.positionY + this.speed);
-  console.log("update");
-  this.element= $('<div>').addClass('bads').css({
-    top: this.positionY,
-    left: this.positionX
-  });
-  $('.board').append(this.element);
-  if(this.positionY > board.bottom-this.element.height()){
-    this.element.remove();
-    this.tobeDeleted = true;
-  }
-};

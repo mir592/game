@@ -15,32 +15,33 @@ this.bottom =  this.top + $('.board').height();
 $(document).ready(function() {
 var desiredNumberOfBads = 10;
 var bads = [];
-var speed = Math.random() * 10 + 20;
 fullfillBads(desiredNumberOfBads);
 function fullfillBads(n){
   for(var i=0; i<n-bads.length; i++){
+    var speed = Math.random() * 10 + 20;
     bads.push(new Obstacles(speed));
   }
   console.log(bads);
 }
 
 function updateAll() {
-bads = bads.filter(function(e){
-  return !e.tobeDeleted;
+bads = bads.filter(function(element){
+  console.log(element.tobeDeleted);
+  return !element.tobeDeleted;
 });
-bads.forEach(function(e){
-  e.updateBads();
+bads.forEach(function(element){
+  element.updateBads();
 });
 }
 
-setInterval(function(){
+//setInterval(function(){
   fullfillBads(desiredNumberOfBads);
-},500);
+//},500);
 
 setInterval(function() {
   updateAll();
   checkObstacles();
-}, 1000);
+}, 200);
 });
 
 

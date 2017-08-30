@@ -16,9 +16,3 @@ $(document).keydown(function() {
     player2.right();
   }
 });
-
-
-/*$(document).on('click', function() {
-  $('#but').remove(); // ¿Quizás una función? Para limpiar cosas de board
-  board.badThings();
-});*/
