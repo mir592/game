@@ -13,6 +13,25 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+#bot {
+  top: 35%;
+  left: 35%;
+  position: absolute;
+  height: 250px;
+  width: 500px;
+  color: white;
+  font-weight: 700;
+  font-size: 55px;
+  background-image: url('/Users/miriam/Desktop/game/images/voldemortSmile.gif');
+  background-size: cover;
+  border-radius: 15px;
+  border: 3px double #006505;
+}
+
+.btn:hover {
+  opacity: 0.6;
+  text-decoration: none;
+}
 .p1{
   background-image: url('/Users/miriam/Desktop/GAME-TIME/images/harry.jpg');
   background-size: contain;
