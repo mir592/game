@@ -264,15 +264,13 @@ Obstacles.prototype.moveObstacles = function() {
 
 function checkObstacles() {
     if($(".p1").collision(".bads").length > 0){
-      $('.p1').attr('id', 'dead');
-      console.log('PLAYER 2 WIN!!!!');
+      $('.p1').attr('id', 'dead1');
       clearInter();
       return;
 
     }
     if($(".p2").collision(".bads").length > 0) {
-      $('.p2').attr('id','dead');
-      console.log('PLAYER 1 WIN!!!!');
+      $('.p2').attr('id','dead2');
       clearInter();
       return;
     }

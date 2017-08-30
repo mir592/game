@@ -9,12 +9,12 @@ body{
   left: 10px;
   top: 50px;
   position: absolute;
-  background-image: url('giphy1.gif');
+  background-image: url('/Users/miriam/Desktop/GAME-TIME/images/hogwartsBlue.gif');
   background-repeat: no-repeat;
   background-size: cover;
 }
 .p1{
-  background-image: url('harry.jpg');
+  background-image: url('/Users/miriam/Desktop/GAME-TIME/images/harry.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   height: 100px;
@@ -25,17 +25,17 @@ body{
 }
 
 .p2{
-  background-image: url('hermione.jpg');
+  background-image: url('/Users/miriam/Desktop/GAME-TIME/images/hermione.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   height: 100px;
   width: 100px;
   position: absolute;
-  left: 1000px;
+  left: 1400px;
   top: 500px;
 }
-#dead{
-  background-image: url('ron.jpg');
+#dead1{
+  background-image: url('/Users/miriam/Desktop/GAME-TIME/images/harryPopotter');
   height: 50px;
   width: 50px;
   background-size: contain;
@@ -43,27 +43,20 @@ body{
   top: 550px;
 
 }
-
-.bads{
-  background-image: url('firework.gif');
+#dead2{
+  background-image: url('/Users/miriam/Desktop/GAME-TIME/images/harryPusheen.gif');
+  height: 50px;
+  width: 50px;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 20px;
-  width: 20px;
+  top: 550px;
+}
+
+.bads{
+  background-image: url('/Users/miriam/Desktop/GAME-TIME/images/voldemort.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
   position: absolute;
-}
-#obstacle1{
-  background-color: yellow;
-}
-#obstacle2{
-  background-color: pink;
-}#obstacle3{
-  background-color: white;
-}#obstacle4{
-  background-color: red;
-}#obstacle5{
-  background-color: green;
-}
-#obstacle6{
-  background-color: brown;
 }
