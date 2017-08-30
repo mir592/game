@@ -18,7 +18,7 @@ $(document).keydown(function() {
 });
 
 
-
-$(document).on('click', function() {
+/*$(document).on('click', function() {
+  $('#but').remove(); // ¿Quizás una función? Para limpiar cosas de board
   board.badThings();
-});
+});*/

@@ -17,7 +17,7 @@ body {
 
 #bot {
   top: 35%;
-  left: 35%;
+  left: 25%;
   position: absolute;
   height: 250px;
   width: 500px;
@@ -76,7 +76,7 @@ body {
 }
 
 .bads {
-  background-image: url('/Users/miriam/Desktop/GAME-TIME/images/voldemort.png');
+  background-image: url('/Users/miriam/Desktop/GAME-TIME/images/avadaKedabra.gif');
   background-size: contain;
   background-repeat: no-repeat;
   height: 50px;
