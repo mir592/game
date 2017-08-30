@@ -1,11 +1,12 @@
-body{
+body {
   width: 100%;
   height: 100%;
   background-color: black;
 }
-.board{
+
+.board {
   height: 600px;
-  width: 1550px;
+  width: 80%;
   left: 10px;
   top: 50px;
   position: absolute;
@@ -13,6 +14,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 #bot {
   top: 35%;
   left: 35%;
@@ -32,37 +34,39 @@ body{
   opacity: 0.6;
   text-decoration: none;
 }
-.p1{
+
+.p1 {
   background-image: url('/Users/miriam/Desktop/GAME-TIME/images/harry.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   height: 100px;
   width: 100px;
   position: absolute;
-  left: 100px;
+  left: 10%;
   top: 500px;
 }
 
-.p2{
+.p2 {
   background-image: url('/Users/miriam/Desktop/GAME-TIME/images/hermione.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   height: 100px;
   width: 100px;
   position: absolute;
-  left: 1400px;
+  left: 80%;
   top: 500px;
 }
-#dead1{
+
+#dead1 {
   background-image: url('/Users/miriam/Desktop/GAME-TIME/images/harryPopotter');
   height: 50px;
   width: 50px;
   background-size: contain;
   background-repeat: no-repeat;
   top: 550px;
-
 }
-#dead2{
+
+#dead2 {
   background-image: url('/Users/miriam/Desktop/GAME-TIME/images/harryPusheen.gif');
   height: 50px;
   width: 50px;
@@ -71,7 +75,7 @@ body{
   top: 550px;
 }
 
-.bads{
+.bads {
   background-image: url('/Users/miriam/Desktop/GAME-TIME/images/voldemort.png');
   background-size: contain;
   background-repeat: no-repeat;
