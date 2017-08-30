@@ -1,6 +1,7 @@
 function Player(playN) {
   this.player = playN;
   this.position();
+
 }
 Player.prototype.position = function() {
   this.posX = $(this.player).position().left;

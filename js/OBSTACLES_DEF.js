@@ -31,6 +31,7 @@ Obstacles.prototype.moveObstacles = function() {
       topPos = $('#obstacle0').position().top;
       newLeft = this.getRandomPositionX2();
       var intervalMoveObsta0 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle0');
@@ -52,6 +53,7 @@ Obstacles.prototype.moveObstacles = function() {
       topPos = $('#obstacle1').position().top;
       newLeft = this.getRandomPositionX1();
       var intervalMoveObsta1 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle1');
@@ -72,6 +74,7 @@ Obstacles.prototype.moveObstacles = function() {
       var topPos = $('#obstacle2').position().top;
       newLeft = this.getRandomPositionX2();
       var intervalMoveObsta2 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle2');
@@ -91,6 +94,7 @@ Obstacles.prototype.moveObstacles = function() {
       topPos = $('#obstacle3').position().top;
       newLeft = this.getRandomPositionX1();
       var intervalMoveObsta3 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle3');
@@ -110,6 +114,7 @@ Obstacles.prototype.moveObstacles = function() {
       topPos = $('#obstacle4').position().top;
       newLeft = this.getRandomPositionX2();
       var intervalMoveObsta4 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle4');
@@ -129,6 +134,7 @@ Obstacles.prototype.moveObstacles = function() {
       topPos = $('#obstacle5').position().top;
       newLeft = this.getRandomPositionX1();
       var intervalMoveObsta5 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle5');
@@ -148,6 +154,7 @@ Obstacles.prototype.moveObstacles = function() {
       topPos = $('#obstacle6').position().top;
       newLeft = this.getRandomPositionX2();
       var intervalMoveObsta6 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle6');
@@ -166,6 +173,7 @@ Obstacles.prototype.moveObstacles = function() {
       topPos = $('#obstacle7').position().top;
       newLeft = this.getRandomPositionX1();
       var intervalMoveObsta7 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle7');
@@ -187,6 +195,7 @@ Obstacles.prototype.moveObstacles = function() {
       topPos = $('#obstacle8').position().top;
       newLeft = this.getRandomPositionX2();
       var intervalMoveObsta8 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle8');
@@ -208,6 +217,7 @@ Obstacles.prototype.moveObstacles = function() {
       topPos = $('#obstacle9').position().top;
       newLeft = this.getRandomPositionX1();
       var intervalMoveObsta9 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle9');
@@ -229,6 +239,7 @@ Obstacles.prototype.moveObstacles = function() {
       topPos = $('#obstacle10').position().top;
       newLeft = this.getRandomPositionX2();
       var intervalMoveObsta10 = setInterval(function() {
+        checkObstacles();
         var obstacleArray;
         if (topPos < 580) {
           obstacleArray = $('#obstacle10');
@@ -251,7 +262,24 @@ Obstacles.prototype.moveObstacles = function() {
   }
 };
 
-function clearInterval() {
+function checkObstacles() {
+    if($(".p1").collision(".bads").length > 0){
+      $('.p1').attr('id', 'dead');
+      console.log('PLAYER 2 WIN!!!!');
+      clearInter();
+      return;
+
+    }
+    if($(".p2").collision(".bads").length > 0) {
+      $('.p2').attr('id','dead');
+      console.log('PLAYER 1 WIN!!!!');
+      clearInter();
+      return;
+    }
+
+}
+
+function clearInter() {
   clearInterval(intervalMoveObsta0);
   clearInterval(intervalMoveObsta1);
   clearInterval(intervalMoveObsta2);

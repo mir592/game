@@ -21,4 +21,4 @@ $(document).keydown(function() {
 
 $(document).on('click', function() {
   board.badThings();
-  });
+});
