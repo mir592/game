@@ -13,6 +13,7 @@ Board.prototype.initBoard = function() {
 /////Empiezan a caer AvadaKedabras en cuanto clicamos en el PLAY\\\\\\
 $('#bot').on('click',function() {
   $('#bot').remove();
+  $('.instruc').remove();
   var numberOfBads = 8;
   var bads = [];
   _createEnemies(numberOfBads);
