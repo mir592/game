@@ -24,33 +24,35 @@ Voldemort.prototype.updateBads = function() {
   }
 };
 Voldemort.prototype.speedPlus = function(){
+  this.speed += 2;
   console.log('velocidad',this.speed);
-  this.speed += 1;
+
 };
 var p1 = 8;
 $('.L1').text(p1);
 var p2 = 8;
 $('.L2').text(p2);
 
-function checkObstacles() {
+function _checkObstacles() {
   if($(".p1").collision(".bads").length > 0){
     $('.L1').text(p1);
     console.log("harry Life: ", p1);
     p1 -=0.5;
-    isDeadP1(p1);
+    _isDeadP1(p1);
     return;
-
   }
   if($(".p2").collision(".bads").length > 0) {
     $('.L2').text(p2);
     console.log('hermioneLifes:' , p2);
     p2 -=0.5;
-    isDeadP2(p2);
+    _isDeadP2(p2);
     return;
   }
+  _allDead(p1, p2);
 }
 
-function isDeadP1(count){
+function _isDeadP1(count){
+
 if (count === 4){
     $('.p1').attr('id', 'dead1');
   }else if(count < 0){
@@ -58,17 +60,17 @@ if (count === 4){
     return true;
   }
 }
-function isDeadP2(count){
+function _isDeadP2(count){
   if (count === 4){
-    $('.p2').attr('id', 'dead2');
+      $('.p2').attr('id', 'dead2');
   }else if(count < 0){
     $('.p2').remove();
     return true;
   }
 }
-function allDead(){
-  if(isDeadP1() && isDeadP2()){
-    
-    $("<div>").addClass('gameOver');
+function _allDead(a, b){
+  console.log(a,b);
+  if(a < 0 && b < 0){
+    $("#lost").attr('class','gameOver').text('GAME OVER');
   }
 }

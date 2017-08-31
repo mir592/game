@@ -14,7 +14,7 @@ Player.prototype.selectToMove = function() {
 };
 
 Player.prototype.left = function() {
-  this.posX -= 50;
+  this.posX -= 15;
   console.log(this.posX);
   if(this.posX < 0){
     this.posX = board.rigth;
@@ -24,10 +24,10 @@ Player.prototype.left = function() {
 };
 
 Player.prototype.right = function() {
-  this.posX += 50;
+  this.posX += 15;
   console.log(this.posX);
   if(this.posX + this.width > board.rigth){
-    this.posX = 0; //NO SE QUEDA AL LIMITE. SOBREPASA
+    this.posX = 0;
   }else{
     this.selectToMove();
   }

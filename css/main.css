@@ -6,11 +6,14 @@
 body {
   width: 100%;
   height: 100%;
-  background-color: black;
+  background-color: black !important;
+  overflow: hidden;
 }
 .title{
+  color: white;
+  padding-top: 10px;
   text-align: center;
-  margin-left: 10px;
+  margin-left: 50px;
   font-family: "harry";
   font-size: 70px;
 }
@@ -24,13 +27,14 @@ body {
   background-size: cover;
 }
 .row{
+  color: white;
   margin-top: 5px;
-  margin-left: 10px;
   padding-left: 10px;
   padding-top: 5px;
   font-size: 25px;
   font-family: "harry";}
-
+.score{
+}
 #bot {
   top: 35%;
   left: 30%;
@@ -76,20 +80,20 @@ body {
 
 #dead1 {
   background-image: url('/Users/miriam/Desktop/game/images/harryPopotter');
-  height: 70px;
-  width: 70px;
+  height: 200px;
+  width: 200px;
   background-size: contain;
   background-repeat: no-repeat;
-  top: 540px;
+  top: 440px;
 }
 
 #dead2 {
   background-image: url('/Users/miriam/Desktop/game/images/harryPusheen.gif');
-  height: 70px;
-  width: 70px;
+  height: 200px;
+  width: 200px;
   background-size: contain;
   background-repeat: no-repeat;
-  top: 550px;
+  top: 500px;
 }
 
 .bads {
@@ -101,5 +105,18 @@ body {
   position: absolute;
 }
 .gameOver{
+  font-family: 'harry';
+  border-radius: 15px;
+  font-weight: 700;
+  font-size: 55px;
+  color: white;
+  top: 35%;
+  left: 30%;
+  position: absolute;
+  height: 250px;
+  width: 500px;
   background-image: url('/Users/miriam/Desktop/game/images/giphy-downsized.gif');
+}
+.gameOver:hover {
+  opacity: 0.5;
 }

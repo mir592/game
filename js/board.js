@@ -11,13 +11,13 @@ Board.prototype.initBoard = function() {
 
 
 /////Empiezan a caer AvadaKedabras en cuanto clicamos en el PLAY\\\\\\
-$(document).on('click',function() {
+$('#bot').on('click',function() {
   $('#bot').remove();
-  var numberOfBads = 10;
+  var numberOfBads = 8;
   var bads = [];
-  createEnemies(numberOfBads);
+  _createEnemies(numberOfBads);
 
-  function createEnemies(n) {
+  function _createEnemies(n) {
     for (var i = 0; i < n - bads.length; i++) {
       var speed = Math.random() * 10 + 15;
       bads.push(new Voldemort(speed));
@@ -25,7 +25,7 @@ $(document).on('click',function() {
     console.log(bads);
   }
 
-  function updateAll() {
+  function _updateAll() {
     bads = bads.filter(function(element) {
       console.log(element.tobeDeleted);
       return !element.tobeDeleted;
@@ -38,12 +38,13 @@ $(document).on('click',function() {
   }
 
   setInterval(function() {
-    createEnemies(numberOfBads);
+    _createEnemies(numberOfBads);
   }, 50);
 
 
   setInterval(function() {
-    updateAll();
-    checkObstacles();
+    _updateAll();
+    _checkObstacles();
   }, 100);
+
 });
