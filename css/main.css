@@ -104,12 +104,12 @@ body {
 }
 
 #dead2 {
-  background-image: url('../images/harryPusheen.gif');
+  background-image: url('../images/gato_hermione.png');
   height: 200px;
   width: 200px;
   background-size: contain;
   background-repeat: no-repeat;
-  top: 500px;
+  top: 410px;
 }
 
 .bads {
