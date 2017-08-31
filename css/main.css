@@ -57,6 +57,12 @@ body {
   font-size: 40px;
   color: #20af0a;
 }
+.L1{
+  position: absolute;
+}
+.L2{
+  position: absolute;
+}
 #bot {
   top: 35%;
   left: 30%;

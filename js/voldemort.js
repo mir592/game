@@ -55,16 +55,24 @@ function _isDeadP1(count){
 
 if (count === 4){
     $('.p1').attr('id', 'dead1');
+    $('.L1').css('color', 'red');
   }else if(count < 0){
     $('.p1').remove();
+    $('.L1').text('DEAD');
+
     return true;
   }
 }
+
 function _isDeadP2(count){
   if (count === 4){
       $('.p2').attr('id', 'dead2');
+      $('.L2').css('color', 'red');
+
   }else if(count < 0){
     $('.p2').remove();
+    $('.L2').text('DEAD');
+
     return true;
   }
 }
