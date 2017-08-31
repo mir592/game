@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Harry";
-  src: url("/Users/miriam/Desktop/game/Harry_Potter/HARRP___.TTF");
+  src: url("../Harry_Potter/HARRP___.TTF");
 }
 
 body {
@@ -22,7 +22,7 @@ body {
   width: 100%;
   left: 10px;
   position: absolute;
-  background-image: url('/Users/miriam/Desktop/game/images/HogwartsCastle.jpg');
+  background-image: url('../images/HogwartsCastle.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -45,7 +45,7 @@ body {
   font-family: 'harry';
   font-weight: 700;
   font-size: 55px;
-  background-image: url('/Users/miriam/Desktop/game/images/voldemortSmile.gif');
+  background-image: url('../images/voldemortSmile.gif');
   background-size: cover;
   border-radius: 15px;
   border: 3px double #006505;
@@ -57,7 +57,7 @@ body {
 }
 
 .p1 {
-  background-image: url('/Users/miriam/Desktop/game/images/harry.jpg');
+  background-image: url('../images/harry.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   height: 100px;
@@ -68,7 +68,7 @@ body {
 }
 
 .p2 {
-  background-image: url('/Users/miriam/Desktop/game/images/hermione.jpg');
+  background-image: url('../images/hermione.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   height: 100px;
@@ -79,7 +79,7 @@ body {
 }
 
 #dead1 {
-  background-image: url('/Users/miriam/Desktop/game/images/harryPopotter');
+  background-image: url('../images/harryPopotter');
   height: 200px;
   width: 200px;
   background-size: contain;
@@ -88,7 +88,7 @@ body {
 }
 
 #dead2 {
-  background-image: url('/Users/miriam/Desktop/game/images/harryPusheen.gif');
+  background-image: url('../images/harryPusheen.gif');
   height: 200px;
   width: 200px;
   background-size: contain;
@@ -97,7 +97,7 @@ body {
 }
 
 .bads {
-  background-image: url('/Users/miriam/Desktop/game/images/avadaKedabra.gif');
+  background-image: url('../images/avadaKedabra.gif');
   background-size: contain;
   background-repeat: no-repeat;
   height: 40px;
@@ -106,6 +106,8 @@ body {
 }
 .gameOver{
   font-family: 'harry';
+  padding-top: 100px;
+  padding-left: 50px;
   border-radius: 15px;
   font-weight: 700;
   font-size: 55px;
@@ -115,7 +117,7 @@ body {
   position: absolute;
   height: 250px;
   width: 500px;
-  background-image: url('/Users/miriam/Desktop/game/images/giphy-downsized.gif');
+  background-image: url('../images/giphy-downsized.gif');
 }
 .gameOver:hover {
   opacity: 0.5;
