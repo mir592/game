@@ -76,9 +76,8 @@ function _isDeadP2(count){
 function _allDead(a, b){
   console.log(a,b);
   if(a < 0 && b < 0){
-    $("#lost").attr('class','gameOver').text('GAME OVER');
-    var gameOverAudio = new Audio("./music/volde.mp3");
-    gameOverAudio.play();
+    $("#lost").attr('class','gameOver').text('GAME OVER.   play again?');
+
 
   }
 
