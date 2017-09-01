@@ -10,6 +10,7 @@ Board.prototype.initBoard = function() {
 };
 
 
+
 /////Empiezan a caer AvadaKedabras en cuanto clicamos en el PLAY\\\\\\
 $('#bot').on('click',function() {
   $('#bot').remove();
@@ -47,6 +48,6 @@ $('#bot').on('click',function() {
     _updateAll();
     _checkObstacles();
   }, 100);
-  
+
 
 });

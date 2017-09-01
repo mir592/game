@@ -1,14 +1,14 @@
 @font-face {
   font-family: "Harry";
-  src: url("../Harry_Potter/HARRP___.TTF");
+  src: url("../fonts/HARRP___.TTF");
 }
 @font-face {
   font-family: 'instrucciones';
-  src: url('../sun/sun.ttf');
+  src: url('../fonts/sun.ttf');
 }
 @font-face {
   font-family: 'digital';
-  src: url('../ds_digital/DS-DIGI.TTF')
+  src: url('../fonts/DS-DIGI.TTF')
 }
 body {
   width: 100%;

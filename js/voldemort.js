@@ -10,6 +10,7 @@ function Voldemort(speed) {
     position: "absolute"
   });
   $(".board").append(this.element);
+
 }
 
 Voldemort.prototype.updateBads = function() {
@@ -26,7 +27,6 @@ Voldemort.prototype.updateBads = function() {
 Voldemort.prototype.speedPlus = function(){
   this.speed += 2;
   console.log('velocidad',this.speed);
-
 };
 var p1 = 8;
 $('.L1').text(p1);
@@ -39,27 +39,25 @@ function _checkObstacles() {
     console.log("harry Life: ", p1);
     p1 -=0.5;
     _isDeadP1(p1);
-    return;
+    return p1;
   }
   if($(".p2").collision(".bads").length > 0) {
     $('.L2').text(p2);
     console.log('hermioneLifes:' , p2);
     p2 -=0.5;
     _isDeadP2(p2);
-    return;
+    return p2;
   }
   _allDead(p1, p2);
 }
 
 function _isDeadP1(count){
-
-if (count === 4){
+  if (count === 4){
     $('.p1').attr('id', 'dead1');
     $('.L1').css('color', 'red');
   }else if(count < 0){
     $('.p1').remove();
     $('.L1').text('DEAD');
-
     return true;
   }
 }
@@ -68,19 +66,20 @@ function _isDeadP2(count){
   if (count === 4){
       $('.p2').attr('id', 'dead2');
       $('.L2').css('color', 'red');
-
   }else if(count < 0){
     $('.p2').remove();
     $('.L2').text('DEAD');
-
     return true;
   }
 }
+
 function _allDead(a, b){
   console.log(a,b);
   if(a < 0 && b < 0){
-    $("#lost").attr('class','gameOver','src','../music/Volde.mp3').text('GAME OVER');
-    $('<audio>').removeAttr('src');
-    $('<source>').attr('src','../music/Volde.mp3');
+    $("#lost").attr('class','gameOver').text('GAME OVER');
+    var gameOverAudio = new Audio("./music/volde.mp3");
+    gameOverAudio.play();
+
   }
+
 }
