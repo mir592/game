@@ -47,5 +47,6 @@ $('#bot').on('click',function() {
     _updateAll();
     _checkObstacles();
   }, 100);
+  
 
 });
